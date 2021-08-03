@@ -7,7 +7,7 @@ class SObserverGui(QObject):
     log_signal = Signal(str)
 
     def __init__(self):
-        pass
+        super().__init__()
 
     def progress(self, value):
         self.progress_signal(value)
@@ -17,4 +17,3 @@ class SObserverGui(QObject):
 
     def finished(self, value):
         self.finished_signal(value)
-        
